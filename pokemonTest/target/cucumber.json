@@ -1,0 +1,99 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-04T00:32:04.686Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1907495500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Verify that all Pokémon names start with “Y”",
+        "description": "",
+        "id": "verify-that-all-pokémon-starting-their-name-with-“y”-are-present-in-the-“list-of-names”;verify-that-all-pokémon-names-start-with-“y”",
+        "after": [
+          {
+            "result": {
+              "duration": 680105600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5760269100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "The user is on the Main Page",
+            "match": {
+              "location": "searchFunction_StepDef.the_user_is_on_the_Main_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10340346800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to Bulbapedia tab and click By Name",
+            "match": {
+              "location": "searchFunction_StepDef.navigate_to_Bulbapedia_tab_and_click_By_Name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2070168300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User click to Y letter in the content List",
+            "match": {
+              "location": "searchFunction_StepDef.user_click_to_Y_letter_in_the_content_List()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 165000500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Verify all the names start with Y Letter",
+            "match": {
+              "location": "searchFunction_StepDef.verify_all_the_names_start_with_Y_Letter()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@try"
+          }
+        ]
+      }
+    ],
+    "name": "Verify that all Pokémon starting their name with “Y” are present in the “List of names”",
+    "description": "",
+    "id": "verify-that-all-pokémon-starting-their-name-with-“y”-are-present-in-the-“list-of-names”",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/pokemonName.feature",
+    "tags": []
+  }
+]

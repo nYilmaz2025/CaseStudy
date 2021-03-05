@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "59fae4c9-f95e-4fbc-a06f-ee92819e3528",
+		"name": "aventiTestCaseStudy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Assertion for gift keywords",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body does not matches gift keyword\", function () {\r",
+							"    pm.expect(pm.response.text()).to.not.include(\"gift\");\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/version/yellow/",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"version",
+						"yellow",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assertion of thunder-punch",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify the move name as thunder-punch\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.moves[2].move.name).to.eql('thunder-punch');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/pikachu?moves.move.name=thunder-punch",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"pikachu"
+					],
+					"query": [
+						{
+							"key": "moves.move.name",
+							"value": "thunder-punch"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
